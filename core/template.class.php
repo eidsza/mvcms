@@ -140,11 +140,15 @@ Class Template {
     public function build($view, $vars, $wrap_layout) {
         is_array($vars) OR $vars = (array) $vars;
         $this->vars = array_merge($this->vars, $vars);
+        if (isset($vars['pid'])){ 
+            $this->_smarty->assign('pid', $vars['pid']);
+        }
         unset($vars);
         $this->set('view_path',BASEPATH . 'apps/' . $this->registry->_application . '/modules/' . $this->registry->_module . '/view/');
         $this->set('view_url',BASEURL . 'apps/' . $this->registry->_application . '/modules/' . $this->registry->_module . '/view/');
         $this->_smarty->assign('vars', $this->vars);
         $this->_smarty->assign('BASEURL', BASEURL);
+
         //Pobierz widok z pliku tpl. w module
         $path = BASEPATH . 'apps/' . $this->registry->_application . '/modules/' . $this->registry->_module . '/view/' . $view . '.tpl';
         if (file_exists($path) == false) {
@@ -166,7 +170,7 @@ Class Template {
             return false;
         }
         $this->_smarty->assign('body', $this->_body);
-        $this->_smarty->assign('site_title', $this->registry->cfg['siteconstants']['SITE_TITLE']);
+        $this->_smarty->assign('site_title', $this->registry->config['siteconstants']['SITE_TITLE']);
         $this->_assign_template_menu($this->_get_template_menu());
         $this->_smarty->display($template);
     }

@@ -16,7 +16,7 @@ protected $theme;
   
   
   public function get_current_theme(){
-  $this->theme = $this->registry->cfg['deftemplates']['AD_DEFAULT_TEMPLATE'];
+  $this->theme = $this->registry->config['deftemplates']['AD_DEFAULT_TEMPLATE'];
   return $this->theme; 
   }
 

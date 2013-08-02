@@ -25,7 +25,7 @@ function index(){
 
 function set($args = null){
  
-    $l = (!empty($args) && in_array($args[0], array('pl', 'de', 'en')) ? $args[0]: substr($this->registry->cfg['applocale']['APP_DEFAULT_LOCALE'],0,2));
+    $l = (!empty($args) && in_array($args[0], array('pl', 'de', 'en')) ? $args[0]: substr($this->registry->config['applocale']['APP_DEFAULT_LOCALE'],0,2));
     
    
     //najpierw sprawdz jakie sa zainstalowane jezyki potem ustaw sesje jesli jest taki jezyk jesli nie to ustaw na domyslny

@@ -25,6 +25,7 @@ Class pageController extends baseController {
         $vars['page_title'] = $page[0]['page_title'];
         $vars['page_precontent'] = $page[0]['page_precontent'];
         $vars['page_content'] = $page[0]['page_content'];
+        $vars['pid']=null;
         $this->template->build('pageView', $vars, true);
     }
 
@@ -35,6 +36,7 @@ Class pageController extends baseController {
             $vars['page_title'] = $page[0]['page_title'];
             $vars['page_precontent'] = $page[0]['page_precontent'];
             $vars['page_content'] = $page[0]['page_content'];
+            $vars['pid']=$args[0];
             $this->template->build('pageView', $vars, true);
         } else {
             header('location: ' . BASEURL);

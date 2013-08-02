@@ -8,7 +8,8 @@
                    {/if}
                    {if ($custom_menu_2[row].depth < $mdepth)}  {assign var='dph' value = $mdepth-$custom_menu_2[row].depth} {'</ul>'|str_repeat:$dph} {/if}
                    <li class="item">                   
-                   <a {if (isset($smarty.get.pid) && $smarty.get.pid == $custom_menu_2[row].fk_page_id)} class='active' {elseif (!isset($smarty.get.pid) && $smarty.section.row.index==0 ) }  class='active' {/if} href="{$BASEURL}page/show/{$custom_menu_2[row].fk_page_id}" title="{$custom_menu_2[row].title}" alt="{$custom_menu_2[row].title}">
+                   <a {if (isset($vars.pid) && $vars.pid == $custom_menu_2[row].fk_page_id)} class='active' 
+                      {elseif (!isset($vars.pid) && $smarty.section.row.index==0 ) }  class='active' {/if} href="{$BASEURL}page/show/{$custom_menu_2[row].fk_page_id}" title="{$custom_menu_2[row].title}" alt="{$custom_menu_2[row].title}">
                    {$custom_menu_2[row].title}
                    </a>
                   {assign var ='mdepth' value = $custom_menu_2[row].depth}
