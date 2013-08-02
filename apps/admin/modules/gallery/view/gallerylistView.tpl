@@ -67,7 +67,7 @@
            
              <tr class="master" id="{$g['id']}">
              <td valign="top">
-                 <div title="przełącz widok" class="rowlocker locked {$row_unlocked}"></div><div style=""><input style="display:none;" type="checkbox" name="lockedtablerows[]" value="{$p['id']}" />
+                 <div title="przełącz widok" class="rowlocker locked {$row_unlocked}"></div><div style=""><input style="display:none;" type="checkbox" name="lockedtablerows[]" value="{$g['id']}" />
                  </div>
              </td>
              <td valign="top"><input type="checkbox" name="delpages[]" value="{$g['id']}" /></td>
