@@ -33,9 +33,7 @@
 	right: 0;
 	clear: both;
 	cursor: pointer;
-	font-weight: bold;
-	border: 1px solid #aaaaaa;
-	padding: 0.3em 0.6em;
+	font-size: 1.1em;
 }
 .ui-daterangepicker ul {
 	width: 17.6em;

@@ -1569,10 +1569,10 @@ STR;
 			$prefix = "http";
 
 		if(empty($this->preventJQueryLoad))
-			$str .= "\t\t<script type='text/javascript' src='$prefix://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js'></script>\n";
+			$str .= "\t\t<script type='text/javascript' src='$prefix://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'></script>\n";
 		if(empty($this->preventJQueryUILoad))
-			$str .= "\t\t<script type='text/javascript' src='$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js'></script>\n";
-                                                            
+			$str .= "\t\t<script type='text/javascript' src='$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js'></script>\n";
+
 		$session_param = "";
 		$session_name = session_name();
 		if($session_name != "PHPSESSID")
@@ -2288,7 +2288,7 @@ STR;
 				$prefix = "http";
 
 			if(empty($form->synchronousResources)) {
-				$str .= str_replace("images/", "$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/{$form->jqueryUITheme}/images/", file_get_contents("$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/{$form->jqueryUITheme}/jquery-ui.css"));
+				$str .= str_replace("images/", "$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/{$form->jqueryUITheme}/images/", file_get_contents("$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/{$form->jqueryUITheme}/jquery-ui.css"));
 				if(!empty($form->jqueryDateRangeIDArr))
 					$str .= file_get_contents("{$form->phpIncludesPath}/jquery/plugins/daterangepicker/ui.daterangepicker.css");
 				if(!empty($form->jqueryColorIDArr))
@@ -2296,7 +2296,7 @@ STR;
 				if(!empty($form->tooltipIDArr))
 					$str .= str_replace(array("tip-yellow_arrows.png", "tip-yellow.png"), array("{$form->jsIncludesPath}/jquery/plugins/poshytip/tip-yellow/tip-yellow_arrows.png", "{$form->jsIncludesPath}/jquery/plugins/poshytip/tip-yellow/tip-yellow.png"), file_get_contents("{$form->phpIncludesPath}/jquery/plugins/poshytip/tip-yellow/tip-yellow.css"));
 			} else  {
-				$str .= "<link href='$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/themes/{$form->jqueryUITheme}/jquery-ui.css' rel='stylesheet' type='text/css'/>";
+				$str .= "<link href='$prefix://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/themes/{$form->jqueryUITheme}/jquery-ui.css' rel='stylesheet' type='text/css'/>";
 				if(!empty($form->jqueryDateRangeIDArr))
 					$str .= "<link href='{$form->jsIncludesPath}/jquery/plugins/daterangepicker/ui.daterangepicker.css' rel='stylesheet' type='text/css'/>";
 				if(!empty($form->jqueryColorIDArr))
@@ -2829,8 +2829,6 @@ STR;
 					$str .= file_get_contents("{$form->phpIncludesPath}/jquery/plugins/poshytip/jquery.poshytip.min.js");
 				if(!empty($form->jqueryDateRangeIDArr))
 					$str .= file_get_contents("{$form->phpIncludesPath}/jquery/plugins/daterangepicker/daterangepicker.jQuery.js");
-          $str .= file_get_contents("{$form->phpIncludesPath}/jquery/plugins/daterangepicker/jquery.ui.datepicker-pl.min.js.js");
-          
 				if(!empty($form->jqueryColorIDArr))
 					$str .= file_get_contents("{$form->phpIncludesPath}/jquery/plugins/colorpicker/colorpicker.js");
 				if(empty($form->preventCaptchaLoad) && !empty($form->captchaID))
