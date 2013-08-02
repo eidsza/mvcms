@@ -10,8 +10,6 @@ Class indexController extends baseController {
 
     protected $registry;
 
-//protected $template;
-
     function __construct($registry) {
         parent::__construct($registry);
         $this->registry = $registry;
@@ -22,30 +20,24 @@ Class indexController extends baseController {
      * @all controllers must contain an index method
      */
     function index() {
-
-        $page = $this->model->getFullPage($id = null, Session::get('ln'));
-
-
-        $this->template->page_title = $page[0]['page_title'];
-        $this->template->page_precontent = $page[0]['page_precontent'];
-        $this->template->page_content = $page[0]['page_content'];
-        $this->template->fetch('frontend/', 'modules/index/view/indexView.tpl');
+        $page = $this->registry->page_model->getFullPage($id = null, Session::get('ln'));
+        $vars = array();
+        $vars['page_title'] = $page[0]['page_title'];
+        $vars['page_precontent'] = $page[0]['page_precontent'];
+        $vars['page_content'] = $page[0]['page_content'];
+        $this->template->build('indexView', $vars, true);
     }
 
     function show($args) {
-
-        $page = $this->model->getFullPage($args[0], Session::get('ln'));
-
+        $page = $this->registry->page_model->getFullPage($args[0], Session::get('ln'));
         if (!empty($page) && is_array($page)) {
-            $this->template->page_title = $page[0]['page_title'];
-            $this->template->page_precontent = $page[0]['page_precontent'];
-            $this->template->page_content = $page[0]['page_content'];
-            $this->template->fetch('frontend/', 'modules/index/view/indexView.tpl');
+            $vars = array();
+            $vars['page_title'] = $page[0]['page_title'];
+            $vars['page_precontent'] = $page[0]['page_precontent'];
+            $vars['page_content'] = $page[0]['page_content'];
+            $this->template->build('indexView', $vars, true);
         } else {
             header('location: ' . BASEURL);
         }
     }
-
 }
-
-?>
