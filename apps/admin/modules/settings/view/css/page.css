@@ -1,0 +1,40 @@
+.sections{
+width:1024px;
+margin: 0 auto;    
+}
+.pfbc-element label{
+text-align:left;
+}
+.pfbc-element span{
+display:block;
+    text-align:left;
+float:left;
+font-weight: normal;
+font-style: italic;
+font-size: 11px;
+color: #AAA;
+   
+}
+/*
+.pfbc-loading {
+display: none;
+position: fixed;
+top:50%;
+left:50%;
+padding-left: 22px;
+}
+*/
+
+input.disabled, input.disabled:hover{
+border-color:#EBEBE4;
+background-color:#f0f0f0;
+color: #555;
+text-shadow: 1px 1px 0 white;
+}
+
+input[type=text], textarea {
+
+color: #555;
+text-shadow: 1px 1px 0 white;
+
+}

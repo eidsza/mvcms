@@ -1,0 +1,25 @@
+$(window).load(function(){
+	$('.slider')._TMS({
+		prevBu:'.prev',
+		nextBu:'.next',
+		playBu:'.play',
+		duration:1000,
+		easing:'',
+		preset:'simpleFade',
+		pagination:true,//'.pagination',true,'<ul></ul>'
+		pagNums:false,
+		slideshow:7000,
+		numStatus:false,
+		banners:true,
+			bannerShow:function(banner){
+				banner
+					.hide()
+					.fadeIn(800)
+			},
+			bannerHide:function(banner){
+				banner
+					.show()
+					.fadeOut(800)
+			}
+		})
+	})

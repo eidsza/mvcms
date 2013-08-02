@@ -1,0 +1,117 @@
+/* ========= thumb list switcher ======*/
+ul.foliodisplay {
+	float: left;
+	width:100%;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/*
+  border-top: 1px solid #333;
+	border-right: 1px solid #333;
+	*/
+	background: #;
+}
+ul.foliodisplay li {
+  list-style-image:none;
+	float: left;
+	width: 100%;
+	min-height:100px;
+  padding: 10px 0;
+	margin: 0;
+	
+  /*border-top: 1px solid #111;
+	border-right: 1px solid #111;
+	border-bottom: 1px solid #333;
+	border-left: 1px solid #333;
+	*/
+
+}
+ul.foliodisplay li a {
+	color: #000000;
+	text-decoration: none;
+}
+ul.foliodisplay li .content_block {
+	padding: 0 10px;
+}
+ul.foliodisplay li .content_block h2 {
+	text-transform: uppercase;
+  font-family:'BentonSansCEThin';
+  margin: 0;
+	padding: 5px 5px 5px 0;
+	font-weight: normal;
+	font-size: 1.7em;
+
+}
+ul.foliodisplay li .content_block p {
+	margin: 0;
+	padding: 0px 0px 5px 0px;
+	font-size: 1em;
+}
+ul.foliodisplay li .content_block a img{
+	padding: 5px;
+	border: 2px solid #ccc;
+	background: #fff;
+	margin: 0 15px 0 0;
+	float: left;
+	display:box;
+}
+
+ul.thumb_view li{
+	width: 160px;
+	display:box;
+	/*height:160px;*/
+}
+ul.thumb_view li h2 {
+	
+  display: none;
+	font-size:1em !important;
+	text-align:left;
+	float:left;
+}
+ul.thumb_view li p{
+	display: none;
+}
+ul.thumb_view li .content_block a img {
+	margin: 0 0 10px;
+
+}
+
+
+a.switch_thumb {
+	float:left;
+  width: 122px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0;
+	margin: 10px 0;
+	display: block;
+	background: url('../images/switch.gif') no-repeat;
+	outline: none;
+	text-indent: -9999px;
+}
+a:hover.switch_thumb {
+	filter:alpha(opacity=75);
+	opacity:.75;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+}
+
+a.gallery_back{
+	float:right;
+  width: 122px;
+	height: 26px;
+	line-height: 26px;
+	padding: 0;
+	margin: 10px 0;
+	display: block;
+	background: url('../images/gallery_back.gif') no-repeat;
+	outline: none;
+	text-indent: -9999px;
+}
+a:hover.gallery_back {
+	filter:alpha(opacity=75);
+	opacity:.75;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+}
+a.swap { background-position: left bottom; }
+
+/* ====================================*/

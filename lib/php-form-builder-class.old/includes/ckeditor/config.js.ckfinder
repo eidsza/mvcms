@@ -1,0 +1,29 @@
+/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
+
+CKEDITOR.editorConfig = function( config )
+{
+	// Define changes to default configuration here. For example:
+	// config.language = 'fr';
+	// config.uiColor = '#AADC6E';
+ var sitefolder = '/ecms3';
+ //alert(sitefolder); 
+ config.language = 'pl';
+
+ //config.filebrowserBrowseUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/ckfinder/ckfinder.html';
+ config.filebrowserBrowseUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/kcfinder/browse.php?type=files';
+ //config.filebrowserImageBrowseUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/ckfinder/ckfinder.html?type=Images';
+ config.filebrowserImageBrowseUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/kcfinder/browse.php?type=images';
+ //config.filebrowserFlashBrowseUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/ckfinder/ckfinder.html?type=Flash';
+ config.filebrowserFlashBrowseUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/kcfinder/browse.php?type=flash';
+ //config.filebrowserUploadUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files';
+ config.filebrowserUploadUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/kcfinder/upload.php?type=files';
+ //config.filebrowserImageUploadUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images';
+ config.filebrowserImageUploadUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/kcfinder/upload.php?type=images';
+ //config.filebrowserFlashUploadUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash';
+ config.filebrowserFlashUploadUrl = sitefolder+'/admin/modules/php-form-builder-class/includes/kcfinder/upload.php?type=flash';
+ 
+
+};
